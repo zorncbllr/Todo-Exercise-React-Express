@@ -7,9 +7,6 @@ export const useCreateTodo = () => {
 
   return useMutation({
     mutationFn: (data: Todo) => createTodo(data),
-    onMutate: () => {},
-    onError: () => {},
-    onSuccess: () => {},
     onSettled: async (err) => {
       if (err) console.log(err);
 
